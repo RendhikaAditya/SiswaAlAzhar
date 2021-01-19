@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="hitam">#17191B</color>
+    <color name="putih">#ffffff</color>
+    <color name="main">#E67E22</color>
+    <color name="backround">#F1F1F1</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="light">#FFFFFF</color>
+    <color name="shimmer_foreground">#DADADA</color>
+    <color name="shimmer_background">#EBEBEB</color>
+
+    <color name="error">#FF4141</color>
+</resources>

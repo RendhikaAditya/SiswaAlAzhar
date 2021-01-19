@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backround"
+    tools:context=".activity.JadwalPelajaranActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="10dp"
+            android:translationZ="3dp"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    android:tint="@color/main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Jadwal Pelajaran"
+                    android:textColor="@color/main"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Pilih Tanggal :" />
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:id="@+id/btTgl"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="45dp"-->
+                <!--                    android:layout_marginLeft="20dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    app:cardCornerRadius="10dp"-->
+                <!--                    app:cardElevation="3dp">-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent">-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/txtTgl"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginLeft="20dp"-->
+                <!--                            android:fontFamily="@font/quicksand_medium"-->
+                <!--                            android:text="12-12-2020"-->
+                <!--                            android:textSize="18dp"-->
+                <!--                            android:textStyle="bold" />-->
+
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="40dp"-->
+                <!--                            android:layout_height="40dp"-->
+                <!--                            android:layout_alignParentRight="true"-->
+                <!--                            android:layout_centerVertical="true"-->
+                <!--                            android:layout_marginRight="10dp"-->
+                <!--                            android:src="@drawable/ic_arrow_down"-->
+                <!--                            android:tint="@color/main" />-->
+
+                <!--                    </RelativeLayout>-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/btSenin"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edmain">
+
+                            <TextView
+                                android:id="@+id/txtSenin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Senin"
+                                android:textColor="@color/putih" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btSelasa"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edview">
+
+                            <TextView
+                                android:id="@+id/txtSelasa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Selasa"
+                                android:textColor="@color/main" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btRabu"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edview">
+
+                            <TextView
+                                android:id="@+id/txtRabu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Rabu"
+                                android:textColor="@color/main" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btKamis"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edview">
+
+                            <TextView
+                                android:id="@+id/txtKamis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Kamis"
+                                android:textColor="@color/main" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btJumat"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edview">
+
+                            <TextView
+                                android:id="@+id/txtJumat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Jum'at"
+                                android:textColor="@color/main" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btSabtu"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/edview">
+
+                            <TextView
+                                android:id="@+id/txtSabtu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/quicksand_medium"
+                                android:text="Sabtu"
+                                android:textColor="@color/main" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Jadwal Pelajaran :" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="65dp"
+                    android:background="@drawable/edview"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/kosong"
+                        android:layout_margin="50dp"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/empty" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="Tidak Ada Jadwal hari ini"
+                            android:textColor="@color/main"
+                            android:textSize="20dp" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvJadwal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="1"
+                        tools:listitem="@layout/row_jadwal" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

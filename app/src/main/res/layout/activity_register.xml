@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Daftar "
+                android:textSize="20dp"
+                android:textColor="@color/main" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:textSize="20dp"
+                android:textColor="@color/hitam"
+                android:text="Sebagai Siswa Baru"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daftar Sebagai Siswa Baru Disini"
+                android:fontFamily="@font/quicksand_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edview"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="Nama"
+                android:paddingLeft="10dp"
+                android:id="@+id/nama"/>
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edview"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="Alamat"
+                android:paddingLeft="10dp"
+                android:id="@+id/alamat"/>
+
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edview"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="Tempat Lahir"
+                android:paddingLeft="10dp"
+                android:id="@+id/tempatLahir"/>
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edview"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:hint="No Hp"
+                android:paddingLeft="10dp"
+                android:id="@+id/nohp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir :"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/getTglLahir"
+                android:background="@drawable/edview"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2021 - 01 - 22"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tglLahir"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/main"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin :"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/btLaki"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edview">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki - Laki"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/main"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:id="@+id/txtLakiLaki"/>
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/btPerempuan"
+                    android:layout_weight="1"
+                    android:background="@drawable/edview">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/main"
+                        android:textSize="16dp"
+                        android:id="@+id/txtPerempuan"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Daftar"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edmain"
+                android:textColor="@color/putih"
+                android:id="@+id/btnDaftar"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Sudah Memiliki Akun ?? "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masuk Sini"
+                    android:textColor="@color/main"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:id="@+id/masuk"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

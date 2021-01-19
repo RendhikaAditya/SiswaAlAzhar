@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/rowTugas"
+    android:background="@drawable/edview">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/edshape"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matematika"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/putih"
+            android:id="@+id/judulPelajaran"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul Tugs"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/main"
+            android:textSize="19dp"
+            android:id="@+id/judulTugas"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jatuh Tempo : 2021-01-21"
+            android:fontFamily="@font/quicksand_medium"
+            android:id="@+id/deadLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buatkan Sepuluh lembar ejaan dengan
+menggunakan bahasa arab seperti contoh
+di bawah ini"
+            android:fontFamily="@font/quicksand_medium"
+            android:textColor="@color/hitam"
+            android:id="@+id/isiTugas"/>
+        
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/filePlace"
+            android:background="@drawable/edview">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_class_black_24dp"
+                android:tint="@color/main"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File tugas.pdf"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksand_medium"
+                android:id="@+id/txtNamaFile"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

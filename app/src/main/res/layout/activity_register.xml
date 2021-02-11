@@ -86,7 +86,7 @@
                 android:background="@drawable/edview"
                 android:inputType="phone"
                 android:maxLines="1"
-                android:hint="No Hp"
+                android:hint="No Hp Orang Tua"
                 android:paddingLeft="10dp"
                 android:id="@+id/nohp"/>
 

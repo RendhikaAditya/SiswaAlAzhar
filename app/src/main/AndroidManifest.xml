@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ProfilActivity"></activity>
+        <activity android:name=".activity.RaporActivity"></activity>
+        <activity android:name=".activity.ProfilActivity" />
         <activity android:name=".activity.KirimTugasActivity" />
         <activity android:name=".activity.TugasActivity" />
         <activity android:name=".activity.PdfActivity" />

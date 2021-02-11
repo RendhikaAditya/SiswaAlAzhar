@@ -7,12 +7,7 @@
     android:background="@color/backround"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_marginBottom="-200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/bgman"/>
+
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
@@ -55,9 +50,9 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/ic_arrow_down"
-                                android:tint="@color/main"
                                 android:layout_alignParentRight="true"
-                                android:layout_margin="10dp"/>
+                                android:layout_margin="10dp"
+                                app:tint="@color/main" />
 
                         <LinearLayout
                             android:layout_marginBottom="20dp"
@@ -97,7 +92,7 @@
                             android:layout_marginBottom="20dp"
                             android:id="@+id/btprofil"
                             android:src="@drawable/ic_person_black_24dp"
-                            android:tint="@color/main" />
+                            app:tint="@color/main" />
 
                     </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -192,6 +187,12 @@
                                 android:layout_marginBottom="10dp"
                                 android:background="@drawable/edview">
 
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_materi"
+                                    android:layout_margin="20dp"/>
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -213,6 +214,12 @@
                                 android:layout_marginBottom="10dp"
                                 android:background="@drawable/edview">
 
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_tugas"
+                                    android:layout_margin="20dp"/>
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -232,6 +239,11 @@
                                 android:layout_marginTop="10dp"
                                 android:background="@drawable/edview">
 
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_quis"
+                                    android:layout_margin="20dp"/>
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -259,8 +271,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:id="@+id/btRapor"
                                 android:layout_marginBottom="10dp"
                                 android:background="@drawable/edview">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_rapor"
+                                    android:layout_margin="20dp"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -278,9 +296,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:id="@+id/btSpp"
                                 android:layout_marginTop="10dp"
                                 android:background="@drawable/edview">
-
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_spp"
+                                    android:layout_margin="20dp"/>
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"

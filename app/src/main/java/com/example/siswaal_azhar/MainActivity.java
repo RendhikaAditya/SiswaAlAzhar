@@ -11,6 +11,7 @@ import com.example.siswaal_azhar.activity.JadwalPelajaranActivity;
 import com.example.siswaal_azhar.activity.JadwalUjianActivity;
 import com.example.siswaal_azhar.activity.MateriActivity;
 import com.example.siswaal_azhar.activity.ProfilActivity;
+import com.example.siswaal_azhar.activity.QuisActivity;
 import com.example.siswaal_azhar.activity.TugasActivity;
 import com.example.siswaal_azhar.databinding.ActivityMainBinding;
 import com.example.siswaal_azhar.util.PrefManager;
@@ -69,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfilActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.btnQuis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, QuisActivity.class);
                 startActivity(intent);
             }
         });

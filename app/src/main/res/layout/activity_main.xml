@@ -237,6 +237,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:layout_marginTop="10dp"
+                                android:id="@+id/btnQuis"
                                 android:background="@drawable/edview">
 
                                 <ImageView

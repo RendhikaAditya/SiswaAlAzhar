@@ -39,6 +39,7 @@ public class AdapterRapor extends RecyclerView.Adapter<AdapterRapor.ListViewHold
         String smester = "";
         if (model.getId_semester().equalsIgnoreCase("1")){
             smester="Ganjil";
+            /// a
         }else {
             smester="Genap";
         }

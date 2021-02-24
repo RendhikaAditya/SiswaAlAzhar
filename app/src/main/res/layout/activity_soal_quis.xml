@@ -11,118 +11,141 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/lineSkor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:orientation="horizontal"
-            android:layout_alignParentTop="true"
-            android:layout_margin="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SKOR : "
-                android:textSize="18dp"
-                android:textColor="@color/hitam"/>
-
-            <TextView
-                android:id="@+id/tvSkor"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/hitam"
-                android:textSize="18dp"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/lineSoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lineSkor"
-            android:orientation="vertical"
-            android:layout_margin="5dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/edview"
+            android:orientation="vertical">
 
-            android:padding="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edshape">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SKOR : "
+                            android:fontFamily="@font/quicksand_bold"
+                            android:textColor="@color/light"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tvSkor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:text="0"
+                            android:textColor="@color/light"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tvSoal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/quicksand_bold"
                 android:gravity="center_horizontal"
-                android:background="@drawable/bg_soal_latihan"
-                android:backgroundTint="@color/hitam"
-                android:layout_marginTop="5dp"
-                android:text="nm"
-                android:textColor="@color/putih"
-                android:textSize="18dp"/>
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="10dp"
+                android:text="nama saya adalah siapa kah nama yang cocok untuk nama saya?"
+                android:textSize="18dp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linePilihanJawaban"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_below="@id/lineSoal"
-            android:layout_margin="3dp">
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
             <RadioGroup
                 android:id="@+id/rgPilihanJawaban"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <RadioButton
                     android:id="@+id/rbPilihanJawaban1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="2dp"
                     android:textColor="@color/hitam"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="13dp"/>
+                    android:textSize="13dp" />
+
                 <RadioButton
                     android:id="@+id/rbPilihanJawaban2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="2dp"
                     android:textColor="@color/hitam"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
+
                 <RadioButton
                     android:id="@+id/rbPilihanJawaban3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/hitam"
-                    android:layout_marginBottom="2dp"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="15dp"/>
+                    android:layout_marginBottom="2dp"
+                    android:textColor="@color/hitam"
+                    android:textSize="15dp" />
+
                 <RadioButton
                     android:id="@+id/rbPilihanJawaban4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="0dp"
-                    android:text="D. asdfg"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="2dp"
-                    android:textColor="@color/hitam"
-                    android:textSize="15dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="0dp" />
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="D. asdfg"
+                    android:textColor="@color/hitam"
+                    android:textSize="15dp" />
             </RadioGroup>
         </LinearLayout>
 
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linePilihanJawaban"
-            android:layout_marginBottom="5dp"
             android:layout_alignParentRight="true"
+            android:background="@drawable/edmain"
+            android:textColor="@color/light"
+            android:fontFamily="@font/quicksand_bold"
             android:layout_gravity="right"
-            android:layout_margin="8dp"
-
-            android:text="SUBMIT"/>
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Next" />
     </RelativeLayout>
 
 </ScrollView>

@@ -1,7 +1,5 @@
 package com.example.siswaal_azhar.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +8,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.siswaal_azhar.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.siswaal_azhar.databinding.ActivityPdfBinding;
-import com.example.siswaal_azhar.util.ApiServer;
 
 import dmax.dialog.SpotsDialog;
 import es.voghdev.pdfviewpager.library.RemotePDFViewPager;
@@ -36,7 +34,8 @@ public class PdfActivity extends AppCompatActivity implements DownloadFile.Liste
         dialog = new SpotsDialog.Builder().setContext(PdfActivity.this).setMessage("Sedang Proses ....").setCancelable(false).build();
 
         Intent intent = new Intent(getIntent());
-        String pdf = ApiServer.pdf+intent.getStringExtra("PDF");
+        String url = intent.getStringExtra("URL");
+        String pdf = url+intent.getStringExtra("PDF");
         String nama = intent.getStringExtra("nama");
         Log.d("pdf", "| isi : "+pdf);
 

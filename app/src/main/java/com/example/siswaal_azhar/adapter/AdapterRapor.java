@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.siswaal_azhar.R;
 import com.example.siswaal_azhar.activity.PdfActivity;
 import com.example.siswaal_azhar.model.ModelRapor;
+import com.example.siswaal_azhar.util.ApiServer;
 
 import java.util.List;
 
@@ -36,6 +37,7 @@ public class AdapterRapor extends RecyclerView.Adapter<AdapterRapor.ListViewHold
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
         final ModelRapor model = rapor.get(position);
+        final ApiServer apiServer = new ApiServer();
         String smester = "";
         if (model.getId_semester().equalsIgnoreCase("1")){
             smester="Ganjil";
@@ -51,6 +53,7 @@ public class AdapterRapor extends RecyclerView.Adapter<AdapterRapor.ListViewHold
                 Intent intent = new Intent(context, PdfActivity.class);
                 intent.putExtra("nama", text);
                 intent.putExtra("PDF", model.getFile());
+                intent.putExtra("URL",ApiServer.pdf_lapor);
                 context.startActivity(intent);
             }
         });

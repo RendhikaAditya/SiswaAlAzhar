@@ -1,7 +1,5 @@
 package com.example.siswaal_azhar.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,10 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.siswaal_azhar.MainActivity;
 import com.example.siswaal_azhar.R;
 import com.example.siswaal_azhar.util.ApiServer;
 import com.example.siswaal_azhar.util.PrefManager;
@@ -59,10 +60,11 @@ public class HasilActivity extends AppCompatActivity {
         mbtnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(HasilActivity.this, QuisActivity.class);
+                Intent i = new Intent(HasilActivity.this, MainActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
+                inputNilai();
             }
         });
 
@@ -81,7 +83,6 @@ public class HasilActivity extends AppCompatActivity {
             //maka skornya diatur dari skorPilGan
 
             mtvHasilAkhir.setText("Skor : "+skorPilGan );
-            inputNilai();
         }
     }
 

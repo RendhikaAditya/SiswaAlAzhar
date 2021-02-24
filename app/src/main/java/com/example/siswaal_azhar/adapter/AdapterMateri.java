@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.siswaal_azhar.R;
 import com.example.siswaal_azhar.activity.PdfActivity;
-import com.example.siswaal_azhar.model.ModelJadwal;
 import com.example.siswaal_azhar.model.ModelMateri;
+import com.example.siswaal_azhar.util.ApiServer;
 
 import java.util.List;
 
@@ -44,6 +44,7 @@ public class AdapterMateri extends RecyclerView.Adapter<AdapterMateri.ListViewHo
                 Intent intent = new Intent(context, PdfActivity.class);
                 intent.putExtra("nama", model.getNama_pelajaran());
                 intent.putExtra("PDF", model.getMateri_pelajaran());
+                intent.putExtra("URL", ApiServer.pdf_materi);
                 context.startActivity(intent);
             }
         });

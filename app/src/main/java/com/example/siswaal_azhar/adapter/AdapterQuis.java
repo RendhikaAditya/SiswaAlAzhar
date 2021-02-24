@@ -1,4 +1,4 @@
-package com.example.siswaal_azhar.adapter;
+jpackage com.example.siswaal_azhar.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,12 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.siswaal_azhar.R;
-import com.example.siswaal_azhar.activity.SoalActivity;
 import com.example.siswaal_azhar.activity.SoalQuisActivity;
-import com.example.siswaal_azhar.model.ModelJadwal;
 import com.example.siswaal_azhar.model.ModelQuis;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterQuis extends RecyclerView.Adapter<AdapterQuis.ViewHolder> {
@@ -32,7 +29,7 @@ public class AdapterQuis extends RecyclerView.Adapter<AdapterQuis.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View a = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_quis, parent, false);
+        View a = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_materi, parent, false);
         ViewHolder holder = new ViewHolder(a);
         return holder;
     }
@@ -67,7 +64,7 @@ public class AdapterQuis extends RecyclerView.Adapter<AdapterQuis.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             context = itemView.getContext();
-            txt_judul = itemView.findViewById(R.id.judul_Pelajaran);
+            txt_judul = itemView.findViewById(R.id.txtPelajaran);
         }
     }
 }

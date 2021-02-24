@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.siswaal_azhar">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,14 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".activity.HasilActivity"></activity>
+        <activity android:name=".activity.SppActivity"></activity>
+        <activity android:name=".activity.HasilActivity" />
         <activity android:name=".activity.SoalQuisActivity" />
         <activity android:name=".activity.SoalActivity" />
         <activity android:name=".activity.QuisActivity" />
-
-        <activity android:name=".activity.RaporActivity"></activity>
-
+        <activity android:name=".activity.RaporActivity" />
         <activity android:name=".activity.ProfilActivity" />
         <activity android:name=".activity.KirimTugasActivity" />
         <activity android:name=".activity.TugasActivity" />
@@ -41,10 +44,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
 </manifest>

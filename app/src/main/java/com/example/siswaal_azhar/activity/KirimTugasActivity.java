@@ -90,6 +90,7 @@ public class KirimTugasActivity extends AppCompatActivity {
                     Intent intent1 = new Intent(KirimTugasActivity.this, PdfActivity.class);
                     intent1.putExtra("nama", intent.getStringExtra("judul"));
                     intent1.putExtra("PDF", intent.getStringExtra("file"));
+                    intent1.putExtra("URL", ApiServer.pdf_tugas);
                     startActivity(intent1);
                 }
             });

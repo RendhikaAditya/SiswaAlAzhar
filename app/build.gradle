@@ -46,7 +46,7 @@ dependencies {
     implementation 'com.github.d-max:spots-dialog:1.1@aar'
     implementation 'es.voghdev.pdfviewpager:library:1.0.3'
 
-
+    implementation 'com.github.dewinjm:monthyear-picker:1.0.2'
     implementation 'net.gotev:uploadservice:2.1'
     implementation 'com.karumi:dexter:5.0.0'
 }

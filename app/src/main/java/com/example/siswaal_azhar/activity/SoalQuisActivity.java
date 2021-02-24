@@ -1,8 +1,5 @@
 package com.example.siswaal_azhar.activity;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,23 +12,22 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.siswaal_azhar.R;
-import com.example.siswaal_azhar.adapter.AdapterQuis;
-import com.example.siswaal_azhar.model.ModelQuis;
 import com.example.siswaal_azhar.util.ApiServer;
-import com.google.gson.Gson;
+import com.example.siswaal_azhar.util.PrefManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import okhttp3.Response;
 
 public class SoalQuisActivity extends AppCompatActivity {
 
@@ -51,11 +47,13 @@ public class SoalQuisActivity extends AppCompatActivity {
     ArrayList<ArrayList<String>> arrayJawaban = new ArrayList<>();
     ArrayList<String> arrayKunci = new ArrayList<>();
 
+    PrefManager prefManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soal_quis);
-
+        prefManager = new PrefManager(this);
         AndroidNetworking.initialize(this);
 
         Intent i = getIntent();
@@ -203,7 +201,9 @@ public class SoalQuisActivity extends AppCompatActivity {
 
     public void ambilData() {
         Log.d("soal", "code : "+id_pelajaran);
-        AndroidNetworking.get(ApiServer.site_url + "get_DataSoal.php?id_pelajaran="+id_pelajaran)
+        AndroidNetworking.post(ApiServer.site_url + "get_DataSoal.php")
+                .addBodyParameter("id_pelajaran", id_pelajaran)
+                .addBodyParameter("id_kelas", prefManager.getLvl())
                 .setPriority(Priority.LOW)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
